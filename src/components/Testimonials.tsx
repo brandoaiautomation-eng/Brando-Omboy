@@ -54,18 +54,10 @@ export const Testimonials: React.FC = () => {
               </div>
 
               {/* Author Footer */}
-              <div className="pt-4 border-t border-[#7B7B7B]/20 flex items-center gap-3">
-                <img
-                  src={t.avatar}
-                  alt={t.name}
-                  className="w-11 h-11 rounded-full object-cover border border-[#7B7B7B]/30 shrink-0"
-                  referrerPolicy="no-referrer"
-                />
-                <div>
-                  <h3 className="text-sm font-bold text-[#222222] font-mono">{t.name}</h3>
-                  <p className="text-xs text-[#7B7B7B] font-medium">{t.role}</p>
-                  <p className="text-[10px] text-[#7B7B7B]">{t.company}</p>
-                </div>
+              <div className="pt-4 border-t border-[#7B7B7B]/20">
+                <h3 className="text-sm font-bold text-[#222222] font-mono">{t.name}</h3>
+                <p className="text-xs text-[#7B7B7B] font-medium">{t.role}</p>
+                <p className="text-[10px] text-[#7B7B7B]">{t.company}</p>
               </div>
             </div>
           ))}
