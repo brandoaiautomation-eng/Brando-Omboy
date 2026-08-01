@@ -6,16 +6,15 @@ import {
   CheckCircle2,
   Workflow,
   Bot,
-  Zap,
-  Calculator
+  Zap
 } from 'lucide-react';
 
 interface ServicesProps {
-  onOpenCalculator: () => void;
+  onOpenCalculator?: () => void;
   onBookConsultation: () => void;
 }
 
-export const Services: React.FC<ServicesProps> = ({ onOpenCalculator, onBookConsultation }) => {
+export const Services: React.FC<ServicesProps> = ({ onBookConsultation }) => {
   const [expandedId, setExpandedId] = useState<string | null>(SERVICES[0]?.id || null);
 
   const toggleExpand = (id: string) => {
@@ -43,14 +42,6 @@ export const Services: React.FC<ServicesProps> = ({ onOpenCalculator, onBookCons
               Specialized automation architecture, custom API orchestration, and AI-driven workflow transformation.
             </p>
           </div>
-
-          <button
-            onClick={onOpenCalculator}
-            className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#FFFFFF] hover:bg-white border border-[#7B7B7B]/30 text-xs font-semibold text-[#222222] transition-all shadow-sm group self-start sm:self-auto"
-          >
-            <Calculator className="w-4 h-4 text-[#222222] group-hover:scale-110 transition-transform" />
-            <span>Calculate Automation ROI</span>
-          </button>
         </div>
 
         {/* Expandable Accordion / Row Cards */}
