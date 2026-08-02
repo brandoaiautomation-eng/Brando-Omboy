@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PERSONAL_INFO } from '../data/resumeData';
-import { Mail, Phone, MapPin, Linkedin, Globe, CheckCircle2, Copy, Check, Calendar, ArrowUpRight, ExternalLink, Clock, Sparkles } from 'lucide-react';
+import { Mail, Linkedin, Globe, CheckCircle2, Copy, Check, Calendar, ArrowUpRight, ExternalLink, Clock, Sparkles } from 'lucide-react';
 
 interface ContactProps {
   onOpenCalculator?: () => void;
@@ -139,28 +139,6 @@ export const Contact: React.FC<ContactProps> = () => {
                   >
                     {copiedEmail ? <Check className="w-4 h-4 text-[#222222]" /> : <Copy className="w-4 h-4" />}
                   </button>
-                </div>
-
-                {/* Phone */}
-                <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-[#F8F8F8] border border-[#7B7B7B]/20">
-                  <div className="p-2.5 rounded-xl bg-[#FFFFFF] text-[#222222] border border-[#7B7B7B]/20">
-                    <Phone className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <p className="text-[10px] text-[#7B7B7B] uppercase font-mono">Phone / WhatsApp</p>
-                    <p className="font-mono font-bold text-[#222222] text-xs">{PERSONAL_INFO.phone}</p>
-                  </div>
-                </div>
-
-                {/* Location */}
-                <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-[#F8F8F8] border border-[#7B7B7B]/20">
-                  <div className="p-2.5 rounded-xl bg-[#FFFFFF] text-[#222222] border border-[#7B7B7B]/20">
-                    <MapPin className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <p className="text-[10px] text-[#7B7B7B] uppercase font-mono">Base Location</p>
-                    <p className="font-mono font-bold text-[#222222] text-xs">{PERSONAL_INFO.location}</p>
-                  </div>
                 </div>
 
               </div>
